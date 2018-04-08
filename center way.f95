@@ -14,7 +14,7 @@ program main
   gamma = 0.1
   dx = L/n
 
-  print*,'输入速度u='
+  print*,'脢盲脠毛脣脵露脠u='
   read(*,*)u
 
   De=gamma/dx
@@ -38,7 +38,7 @@ program main
     A(5,5)=0
 
     A(1,1)=aP
-    A(1,2)=aE
+    A(1,2)=-aE
     b(1)=aW*f0
 
     do I=2,(n-1)
@@ -67,6 +67,6 @@ program main
         x(n-I)=d(n-I)-c(n-I)*x(n-I+1)
     end do
 
-    print*,'中心差分法f=',x
+    print*,'脰脨脨脛虏卯路脰路篓f=',x
 
 end subroutine solve
