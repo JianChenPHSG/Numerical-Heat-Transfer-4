@@ -14,7 +14,7 @@ program main
   gamma = 0.1
   dx = L/n
 
-  print*,'ÊäÈëËÙ¶Èu='
+  print*,'input u='
   read(*,*)u
 
   De=gamma/dx
@@ -39,7 +39,7 @@ program main
 
     A(1,1)=0.5*Fe+3*De
     A(1,2)=-(De-0.5*Fe)
-    b(1)=(2*De+Fe)*f0
+    b(1)=(A(1,1)+A(1,2))*f0
 
     do I=2,(n-1)
         A(I,I-1)=-aW
@@ -50,7 +50,7 @@ program main
 
     A(n,n-1)=-(Dw+0.5*Fw)
     A(n,n)=3*Dw-0.5*Fw
-    b(n)=(2*D-Fw)*fL
+    b(n)=(A(n,n-1)+A(n,n))*fL
 
 
     c(1)=A(1,2)/A(1,1)
@@ -67,6 +67,6 @@ program main
         x(n-I)=d(n-I)-c(n-I)*x(n-I+1)
     end do
 
-    print*,'ÖÐÐÄ²î·Ö·¨f=',x
+    print*,'center f=',x
 
 end subroutine solve
