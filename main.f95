@@ -1,21 +1,22 @@
 !Group4 Work1
+!by CXY
 program Work1
   implicit none
 
   real:: aE1,aE2,aE3,aW1,aW2,aW3,aP1,aP2,aP3,De,Dw,Fe,Fw,Pe,Pw,L,u,dx,f0,fL,ro,gama
   integer::I,J,n,k
 
-!ÊäÈë½ÚµãÊı
+!è¾“å…¥èŠ‚ç‚¹æ•°
   print*,'INPUT NUMBER OF CELLS n='
   read(*,*)n
 
-!ÊäÈëËÙ¶È
+!è¾“å…¥é€Ÿåº¦
   print*,'INPUT INLET VELOCITY u='
   read(*,*)u
 
 
-!Ñ¡Ôñ·½·¨
-write(*,*)'ÊäÈëÑ¡Ôñ:1.ÖĞĞÄ²î·Ö£»2.ÉÏ·ç¸ñÊ½£»3.»ìºÏ¸ñÊ½'
+!é€‰æ‹©æ–¹æ³•
+write(*,*)'è¾“å…¥é€‰æ‹©:1.ä¸­å¿ƒå·®åˆ†ï¼›2.ä¸Šé£æ ¼å¼ï¼›3.æ··åˆæ ¼å¼'
 read(*,*)k
 if(k==1)then
     CALL center(n,u)
