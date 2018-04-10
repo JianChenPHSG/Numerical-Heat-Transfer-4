@@ -1,4 +1,3 @@
-!Group4 Work1
 !by CXY
 program Work1
   implicit none
