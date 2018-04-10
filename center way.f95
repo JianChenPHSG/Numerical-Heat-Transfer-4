@@ -37,9 +37,9 @@ program main
 
     A(5,5)=0
 
-    A(1,1)=0.5*Fe+3*De
+    A(1,1)=0.5*Fe+De+2*Dw
     A(1,2)=-(De-0.5*Fe)
-    b(1)=(A(1,1)+A(1,2))*f0
+    b(1)=(A(1,1)+A(1,2)+(Fw-Fe))*f0
 
     do I=2,(n-1)
         A(I,I-1)=-aW
@@ -49,8 +49,8 @@ program main
     end do
 
     A(n,n-1)=-(Dw+0.5*Fw)
-    A(n,n)=3*Dw-0.5*Fw
-    b(n)=(A(n,n-1)+A(n,n))*fL
+    A(n,n)=Dw+2*De-0.5*Fw
+    b(n)=(A(n,n-1)+A(n,n)+(Fw-Fe))*fL
 
 
     c(1)=A(1,2)/A(1,1)
