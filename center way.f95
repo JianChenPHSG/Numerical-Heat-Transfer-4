@@ -32,7 +32,7 @@ program main
 
   subroutine solve(aE,aW,aP,n,f0,fL)
     implicit none
-    real::aW,aE,aP,f0,fL,A(5,5),b(5),c(4),d(5),x(5)
+    real::aW,aE,aP，De,Dw,Fe,Fw,f0,fL,A(5,5),b(5),c(4),d(5),x(5)
     integer::I,J,n
 
     A(5,5)=0
